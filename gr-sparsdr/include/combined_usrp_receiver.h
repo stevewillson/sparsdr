@@ -23,9 +23,9 @@
 #define INCLUDED_SPARSDR_COMBINED_USRP_RECEIVER_H
 
 #include <gnuradio/hier_block2.h>
-#include <sparsdr/api.h>
-#include <sparsdr/band_spec.h>
-#include <sparsdr/compressing_source.h>
+#include <api.h>
+#include <band_spec.h>
+#include <compressing_source.h>
 #include <uhd/types/device_addr.hpp>
 #include <uhd/types/tune_request.hpp>
 #include <uhd/types/tune_result.hpp>
@@ -43,7 +43,7 @@ class SPARSDR_API combined_usrp_receiver : virtual public gr::hier_block2,
                                            public compressing_source
 {
 public:
-    typedef boost::shared_ptr<combined_usrp_receiver> sptr;
+    typedef std::shared_ptr<combined_usrp_receiver> sptr;
 
     /*!
      * \brief Return a shared_ptr to a new instance of sparsdr::combined_usrp_receiver.

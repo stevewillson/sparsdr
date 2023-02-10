@@ -1,9 +1,10 @@
-INCLUDE(FindPkgConfig)
-PKG_CHECK_MODULES(PC_SPARSDR sparsdr)
+find_package(PkgConfig)
+
+PKG_CHECK_MODULES(PC_SPARSDR gnuradio-sparsdr)
 
 FIND_PATH(
     SPARSDR_INCLUDE_DIRS
-    NAMES sparsdr/api.h
+    NAMES gnuradio/sparsdr/api.h
     HINTS $ENV{SPARSDR_DIR}/include
         ${PC_SPARSDR_INCLUDEDIR}
     PATHS ${CMAKE_INSTALL_PREFIX}/include
@@ -24,7 +25,7 @@ FIND_LIBRARY(
           /usr/lib64
           )
 
-include("${CMAKE_CURRENT_LIST_DIR}/sparsdrTarget.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/gnuradio-sparsdrTarget.cmake")
 
 INCLUDE(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(SPARSDR DEFAULT_MSG SPARSDR_LIBRARIES SPARSDR_INCLUDE_DIRS)

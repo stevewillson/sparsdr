@@ -21,7 +21,7 @@
 #ifndef INCLUDED_SPARSDR_SWAP_16_IMPL_H
 #define INCLUDED_SPARSDR_SWAP_16_IMPL_H
 
-#include <sparsdr/swap_16.h>
+#include <swap_16.h>
 
 namespace gr {
 namespace sparsdr {

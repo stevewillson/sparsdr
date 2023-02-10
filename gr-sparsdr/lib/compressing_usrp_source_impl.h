@@ -22,7 +22,7 @@
 #define INCLUDED_SPARSDR_COMPRESSING_USRP_SOURCE_IMPL_H
 
 #include <gnuradio/uhd/usrp_source.h>
-#include <sparsdr/compressing_usrp_source.h>
+#include <compressing_usrp_source.h>
 
 namespace gr {
 namespace sparsdr {

@@ -27,7 +27,7 @@
 
 #include <iio.h>
 
-#include <sparsdr/iio_device_source.h>
+#include <iio_device_source.h>
 
 namespace gr {
 namespace sparsdr {

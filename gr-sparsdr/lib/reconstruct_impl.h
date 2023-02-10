@@ -21,7 +21,7 @@
 #ifndef INCLUDED_SPARSDR_RECONSTRUCT_IMPL_H
 #define INCLUDED_SPARSDR_RECONSTRUCT_IMPL_H
 
-#include <sparsdr/reconstruct.h>
+#include <reconstruct.h>
 #include <unistd.h>
 #include <boost/noncopyable.hpp>
 

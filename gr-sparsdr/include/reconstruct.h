@@ -23,8 +23,8 @@
 #define INCLUDED_SPARSDR_RECONSTRUCT_H
 
 #include <gnuradio/hier_block2.h>
-#include <sparsdr/api.h>
-#include <sparsdr/band_spec.h>
+#include <api.h>
+#include <band_spec.h>
 
 namespace gr {
 namespace sparsdr {
@@ -38,7 +38,7 @@ namespace sparsdr {
 class SPARSDR_API reconstruct : virtual public gr::hier_block2
 {
 public:
-    typedef boost::shared_ptr<reconstruct> sptr;
+    typedef std::shared_ptr<reconstruct> sptr;
 
     /*!
      * \brief Return a shared_ptr to a new instance of sparsdr::reconstruct.

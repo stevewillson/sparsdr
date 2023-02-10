@@ -23,8 +23,8 @@
 #define INCLUDED_SPARSDR_COMPRESSING_USRP_SOURCE_H
 
 #include <gnuradio/hier_block2.h>
-#include <sparsdr/api.h>
-#include <sparsdr/compressing_source.h>
+#include <api.h>
+#include <compressing_source.h>
 #include <uhd/types/device_addr.hpp>
 #include <uhd/types/tune_request.hpp>
 #include <uhd/types/tune_result.hpp>
@@ -42,7 +42,7 @@ class SPARSDR_API compressing_usrp_source : virtual public gr::hier_block2,
                                             public compressing_source
 {
 public:
-    typedef boost::shared_ptr<compressing_usrp_source> sptr;
+    typedef std::shared_ptr<compressing_usrp_source> sptr;
 
     /*!
      * \brief Return a shared_ptr to a new instance of sparsdr::compressing_usrp_source.

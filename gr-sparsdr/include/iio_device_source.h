@@ -23,7 +23,7 @@
 #define INCLUDED_SPARSDR_IIO_DEVICE_SOURCE_H
 
 #include <gnuradio/sync_block.h>
-#include <sparsdr/api.h>
+#include <api.h>
 #include <cstddef>
 
 struct iio_device;
@@ -44,7 +44,7 @@ namespace sparsdr {
 class SPARSDR_API iio_device_source : virtual public gr::sync_block
 {
 public:
-    typedef boost::shared_ptr<iio_device_source> sptr;
+    typedef std::shared_ptr<iio_device_source> sptr;
 
     /*!
      * \brief Return a shared_ptr to a new instance of sparsdr::iio_device_source.

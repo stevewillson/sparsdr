@@ -21,7 +21,7 @@
 #ifndef INCLUDED_SPARSDR_COMPRESSING_SOURCE_H
 #define INCLUDED_SPARSDR_COMPRESSING_SOURCE_H
 
-#include <sparsdr/api.h>
+#include <api.h>
 #include <cstdint>
 #include <string>
 

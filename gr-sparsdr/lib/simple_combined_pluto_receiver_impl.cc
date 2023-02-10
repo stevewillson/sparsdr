@@ -25,7 +25,7 @@
 #include "combined_common.h"
 #include "simple_combined_pluto_receiver_impl.h"
 #include <gnuradio/io_signature.h>
-#include <sparsdr/combined_pluto_receiver.h>
+#include <combined_pluto_receiver.h>
 
 namespace gr {
 namespace sparsdr {

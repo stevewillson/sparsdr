@@ -20,7 +20,7 @@
 #ifndef SPARSDR_THRESHOLD_FILE_H
 #define SPARSDR_THRESHOLD_FILE_H
 
-#include <sparsdr/api.h>
+#include <api.h>
 #include <cstdint>
 #include <istream>
 #include <string>

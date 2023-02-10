@@ -21,9 +21,9 @@
 #ifndef INCLUDED_SPARSDR_COMBINED_PLUTO_RECEIVER_IMPL_H
 #define INCLUDED_SPARSDR_COMBINED_PLUTO_RECEIVER_IMPL_H
 
-#include <sparsdr/combined_pluto_receiver.h>
-#include <sparsdr/compressing_pluto_source.h>
-#include <sparsdr/reconstruct.h>
+#include <combined_pluto_receiver.h>
+#include <compressing_pluto_source.h>
+#include <reconstruct.h>
 
 namespace gr {
 namespace sparsdr {

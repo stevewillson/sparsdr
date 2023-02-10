@@ -23,7 +23,7 @@
 #define INCLUDED_SPARSDR_SWAP_16_H
 
 #include <gnuradio/sync_block.h>
-#include <sparsdr/api.h>
+#include <api.h>
 
 namespace gr {
 namespace sparsdr {
@@ -42,7 +42,7 @@ namespace sparsdr {
 class SPARSDR_API swap_16 : virtual public gr::sync_block
 {
 public:
-    typedef boost::shared_ptr<swap_16> sptr;
+    typedef std::shared_ptr<swap_16> sptr;
 
     /*!
      * \brief Return a shared_ptr to a new instance of sparsdr::swap_16.

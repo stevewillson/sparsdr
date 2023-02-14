@@ -21,8 +21,8 @@
 #ifndef INCLUDED_SPARSDR_SIMPLE_COMBINED_PLUTO_RECEIVER_IMPL_H
 #define INCLUDED_SPARSDR_SIMPLE_COMBINED_PLUTO_RECEIVER_IMPL_H
 
-#include <combined_pluto_receiver.h>
-#include <simple_combined_pluto_receiver.h>
+#include <gnuradio/sparsdr/combined_pluto_receiver.h>
+#include <gnuradio/sparsdr/simple_combined_pluto_receiver.h>
 
 namespace gr {
 namespace sparsdr {

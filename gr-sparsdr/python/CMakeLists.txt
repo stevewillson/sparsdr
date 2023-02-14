@@ -14,7 +14,7 @@ if(NOT PYTHONINTERP_FOUND)
     return()
 endif()
 
-add_subdirectory(bindings)
+add_subdirectory(sparsdr/bindings)
 
 ########################################################################
 # Install python sources

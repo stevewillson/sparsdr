@@ -27,7 +27,7 @@
 
 #include <iio.h>
 
-#include <iio_device_source.h>
+#include <gnuradio/sparsdr/iio_device_source.h>
 
 namespace gr {
 namespace sparsdr {

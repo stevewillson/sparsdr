@@ -59,7 +59,7 @@ outputs:
 
 templates:
     imports: |-
-        import sparsdr
+        from gnuradio import sparsdr
         from gnuradio import uhd
     make: |-
         sparsdr.compressing_usrp_source(uhd.device_addr(${device_addr}))

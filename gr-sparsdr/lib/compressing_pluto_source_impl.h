@@ -22,7 +22,7 @@
 #define INCLUDED_SPARSDR_COMPRESSING_PLUTO_SOURCE_IMPL_H
 
 #include <iio.h>
-#include <compressing_pluto_source.h>
+#include <gnuradio/sparsdr/compressing_pluto_source.h>
 
 namespace gr {
 namespace sparsdr {

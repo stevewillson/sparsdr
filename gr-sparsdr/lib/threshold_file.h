@@ -20,7 +20,7 @@
 #ifndef SPARSDR_THRESHOLD_FILE_H
 #define SPARSDR_THRESHOLD_FILE_H
 
-#include <api.h>
+#include <gnuradio/sparsdr/api.h>
 #include <cstdint>
 #include <istream>
 #include <string>
@@ -33,8 +33,8 @@ namespace sparsdr {
  * Thresholds and other information read from a file
  */
 // Although this is not part of the public API,
-// it is annoted with SPARSDR_API so the testing code can link to it.
-struct SPARSDR_API threshold_file {
+// it is annoted with GR_SPARSDR_API so the testing code can link to it.
+struct GR_SPARSDR_API threshold_file {
 public:
     /** Gain, from the RxGaindB line */
     std::int32_t gain;

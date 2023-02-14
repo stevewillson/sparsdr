@@ -21,9 +21,9 @@
 #ifndef INCLUDED_SPARSDR_COMBINED_USRP_RECEIVER_IMPL_H
 #define INCLUDED_SPARSDR_COMBINED_USRP_RECEIVER_IMPL_H
 
-#include <combined_usrp_receiver.h>
-#include <compressing_usrp_source.h>
-#include <reconstruct.h>
+#include <gnuradio/sparsdr/combined_usrp_receiver.h>
+#include <gnuradio/sparsdr/compressing_usrp_source.h>
+#include <gnuradio/sparsdr/reconstruct.h>
 
 namespace gr {
 namespace sparsdr {

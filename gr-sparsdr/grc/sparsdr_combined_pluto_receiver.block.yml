@@ -475,8 +475,8 @@ asserts:
 
 templates:
     imports: |-
-        import sparsdr
-        import distutils.spawn
+        from gnuradio import sparsdr
+        import shutil
     var_make: |-
         ${id}_bands = sparsdr.band_spec_vector()
         % if int(eval(band_count)) > 0:
@@ -575,7 +575,7 @@ templates:
         % if int(eval(band_count)) > 31:
         ${id}_bands.push_back(sparsdr.band_spec(${band_31_frequency}, ${band_31_bins}))
         % endif
-        self.${id} = ${id} = sparsdr.combined_pluto_receiver(uri=${uri}, buffer_size=${buffer_size}, fft_size=${fft_size}, center_frequency=${frequency}, bands=${id}_bands, reconstruct_path=distutils.spawn.find_executable(${reconstruct_path}), zero_gaps=${zero_gaps})
+        self.${id} = ${id} = sparsdr.combined_pluto_receiver(uri=${uri}, buffer_size=${buffer_size}, fft_size=${fft_size}, center_frequency=${frequency}, bands=${id}_bands.get_values(), reconstruct_path=shutil.which(${reconstruct_path}), zero_gaps=${zero_gaps})
         self.${id}.set_frequency(${frequency})
         self.${id}.set_gain_control_mode(${gain_control_mode})
         % if eval(gain_control_mode) == "manual":

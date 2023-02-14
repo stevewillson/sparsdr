@@ -1,6 +1,6 @@
 #include "threshold_file.h"
 #include "window.h"
-#include <compressing_source.h>
+#include <gnuradio/sparsdr/compressing_source.h>
 #include <boost/lexical_cast.hpp>
 #include <stdexcept>
 

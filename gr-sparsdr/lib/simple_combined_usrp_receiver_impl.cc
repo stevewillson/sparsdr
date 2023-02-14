@@ -25,7 +25,7 @@
 #include "combined_common.h"
 #include "simple_combined_usrp_receiver_impl.h"
 #include <gnuradio/io_signature.h>
-#include <combined_usrp_receiver.h>
+#include <gnuradio/sparsdr/combined_usrp_receiver.h>
 
 namespace gr {
 namespace sparsdr {

@@ -431,8 +431,8 @@ asserts:
 
 templates:
     imports: |-
-        import sparsdr
-        import distutils.spawn
+        from gnuradio import sparsdr
+        import shutil
     var_make: |-
         ${id}_bands = sparsdr.band_spec_vector()
         % if int(eval(band_count)) > 0:
@@ -531,7 +531,7 @@ templates:
         % if int(eval(band_count)) > 31:
         ${id}_bands.push_back(sparsdr.band_spec(${band_31_frequency}, ${band_31_bins}))
         % endif
-        self.${id} = ${id} = sparsdr.reconstruct(bands=${id}_bands, reconstruct_path=distutils.spawn.find_executable(${reconstruct_path}), sample_format=${compressed_format}, zero_gaps=${zero_gaps}, compression_fft_size=${compression_fft_size})
+        self.${id} = ${id} = sparsdr.reconstruct(bands=${id}_bands.get_values(), reconstruct_path=shutil.which(${reconstruct_path}), sample_format=${compressed_format}, zero_gaps=${zero_gaps}, compression_fft_size=${compression_fft_size})
 
 documentation: |-
     The SparSDR reconstruct block receives compressed samples and reconstructs signals from one or more bands.

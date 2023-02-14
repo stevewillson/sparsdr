@@ -467,9 +467,9 @@ asserts:
 
 templates:
     imports: |-
-        import sparsdr
+        from gnuradio import sparsdr
         from gnuradio import uhd
-        import distutils.spawn
+        import shutil
     var_make: |-
         ${id}_bands = sparsdr.band_spec_vector()
         % if int(eval(band_count)) > 0:
@@ -569,7 +569,7 @@ templates:
         ${id}_bands.push_back(sparsdr.band_spec(${band_31_frequency}, ${band_31_bins})
         % endif
         
-        self.${id} = ${id} = sparsdr.combined_usrp_receiver(device_addr=uhd.device_addr(${device_addr}), format_version=${format_version}, center_frequency=${frequency}, bands=${id}_bands, reconstruct_path=distutils.spawn.find_executable(${reconstruct_path}), zero_gaps=${zero_gaps})
+        self.${id} = ${id} = sparsdr.combined_usrp_receiver(device_addr=uhd.device_addr(${device_addr}), format_version=${format_version}, center_frequency=${frequency}, bands=${id}_bands.get_values(), reconstruct_path=shutil.which(${reconstruct_path}), zero_gaps=${zero_gaps})
         self.${id}.set_antenna(${antenna})
         self.${id}.set_center_freq(uhd.tune_request(${frequency}))
         self.${id}.set_gain(${gain})

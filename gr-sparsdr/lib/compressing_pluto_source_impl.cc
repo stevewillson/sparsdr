@@ -25,7 +25,7 @@
 #include "compressing_pluto_source_impl.h"
 #include <gnuradio/io_signature.h>
 
-#include <iio_device_source.h>
+#include <gnuradio/sparsdr/iio_device_source.h>
 #include <boost/lexical_cast.hpp>
 #include <cmath>
 #include <cstring>

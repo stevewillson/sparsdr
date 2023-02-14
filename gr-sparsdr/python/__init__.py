@@ -16,6 +16,10 @@ import os
 try:
     # this might fail if the module is python-only
     from .sparsdr_python import *
+except ImportError:
+    dirname, filename = os.path.split(os.path.abspath(__file__))
+    __path__.append(os.path.join(dirname, "bindings"))
+    from .sparsdr_python import *
 except ModuleNotFoundError:
     pass
 

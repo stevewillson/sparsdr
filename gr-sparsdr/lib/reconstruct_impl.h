@@ -21,7 +21,7 @@
 #ifndef INCLUDED_SPARSDR_RECONSTRUCT_IMPL_H
 #define INCLUDED_SPARSDR_RECONSTRUCT_IMPL_H
 
-#include <reconstruct.h>
+#include <gnuradio/sparsdr/reconstruct.h>
 #include <unistd.h>
 #include <boost/noncopyable.hpp>
 

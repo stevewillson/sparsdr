@@ -38,8 +38,10 @@ int bins_calc(float capture_center_freq,
     }
 
     // Compute FFT bin number, round to avoid float errors
-    left_bin_float = round_float((band_left - capture_left) / bin_width, rnd_digits) - 2.0;
-    right_bin_float = round_float((band_right - capture_left) / bin_width, rnd_digits) + 2.0;
+    left_bin_float =
+        round_float((band_left - capture_left) / bin_width, rnd_digits) - 2.0;
+    right_bin_float =
+        round_float((band_right - capture_left) / bin_width, rnd_digits) + 2.0;
 
     // find the integer values for bin number
     left_bin = floor(left_bin_float);
@@ -54,9 +56,10 @@ int bins_calc(float capture_center_freq,
                         rnd_digits);
 
     if ((right_bin - left_bin + 1) % 2 != 0) {
-        if ((left_bin == 0) || (left_bin == (fft_size / 2)))
+        if ((left_bin == 0) || ((unsigned int)left_bin == (fft_size / 2)))
             right_bin += 1;
-        else if ((right_bin == (fft_size - 1)) || (right_bin == (fft_size / 2) - 1))
+        else if (((unsigned int)right_bin == (fft_size - 1)) ||
+                 ((unsigned int)right_bin == (fft_size / 2) - 1))
             left_bin -= 1;
         else if (r_adj > l_adj)
             right_bin -= 1;

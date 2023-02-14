@@ -1,7 +1,7 @@
 #ifndef COMBINED_COMMON_H
 #define COMBINED_COMMON_H
-#include <band_spec.h>
-#include <simple_band_spec.h>
+#include <gnuradio/sparsdr/band_spec.h>
+#include <gnuradio/sparsdr/simple_band_spec.h>
 #include <string>
 #include <vector>
 

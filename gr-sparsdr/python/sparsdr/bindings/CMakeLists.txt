@@ -31,7 +31,6 @@ include(GrPybind)
 list(APPEND sparsdr_python_files
     python_bindings.cc
     band_spec_python.cc
-    band_spec_vector_python.cc
     combined_pluto_receiver_python.cc
     combined_usrp_receiver_python.cc
     compressing_pluto_source_python.cc

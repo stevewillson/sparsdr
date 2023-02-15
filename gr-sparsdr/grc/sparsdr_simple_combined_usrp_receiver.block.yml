@@ -455,102 +455,102 @@ templates:
         from gnuradio import uhd
         import shutil
     var_make: |-
-        ${id}_bands = sparsdr.simple_band_spec_vector()
+        ${id}_bands = []
         % if int(eval(band_count)) > 0:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_0_frequency}, ${band_0_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_0_frequency}, ${band_0_bandwidth})
         % endif
         % if int(eval(band_count)) > 1:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_1_frequency}, ${band_1_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_1_frequency}, ${band_1_bandwidth})
         % endif
         % if int(eval(band_count)) > 2:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_2_frequency}, ${band_2_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_2_frequency}, ${band_2_bandwidth})
         % endif
         % if int(eval(band_count)) > 3:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_3_frequency}, ${band_3_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_3_frequency}, ${band_3_bandwidth})
         % endif
         % if int(eval(band_count)) > 4:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_4_frequency}, ${band_4_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_4_frequency}, ${band_4_bandwidth})
         % endif
         % if int(eval(band_count)) > 5:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_5_frequency}, ${band_5_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_5_frequency}, ${band_5_bandwidth})
         % endif
         % if int(eval(band_count)) > 6:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_6_frequency}, ${band_6_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_6_frequency}, ${band_6_bandwidth})
         % endif
         % if int(eval(band_count)) > 7:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_7_frequency}, ${band_7_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_7_frequency}, ${band_7_bandwidth})
         % endif
         % if int(eval(band_count)) > 8:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_8_frequency}, ${band_8_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_8_frequency}, ${band_8_bandwidth})
         % endif
         % if int(eval(band_count)) > 9:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_9_frequency}, ${band_9_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_9_frequency}, ${band_9_bandwidth})
         % endif
         % if int(eval(band_count)) > 10:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_10_frequency}, ${band_10_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_10_frequency}, ${band_10_bandwidth})
         % endif
         % if int(eval(band_count)) > 11:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_11_frequency}, ${band_11_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_11_frequency}, ${band_11_bandwidth})
         % endif
         % if int(eval(band_count)) > 12:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_12_frequency}, ${band_12_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_12_frequency}, ${band_12_bandwidth})
         % endif
         % if int(eval(band_count)) > 13:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_13_frequency}, ${band_13_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_13_frequency}, ${band_13_bandwidth})
         % endif
         % if int(eval(band_count)) > 14:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_14_frequency}, ${band_14_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_14_frequency}, ${band_14_bandwidth})
         % endif
         % if int(eval(band_count)) > 15:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_15_frequency}, ${band_15_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_15_frequency}, ${band_15_bandwidth})
         % endif
         % if int(eval(band_count)) > 16:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_16_frequency}, ${band_16_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_16_frequency}, ${band_16_bandwidth})
         % endif
         % if int(eval(band_count)) > 17:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_17_frequency}, ${band_17_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_17_frequency}, ${band_17_bandwidth})
         % endif
         % if int(eval(band_count)) > 18:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_18_frequency}, ${band_18_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_18_frequency}, ${band_18_bandwidth})
         % endif
         % if int(eval(band_count)) > 19:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_19_frequency}, ${band_19_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_19_frequency}, ${band_19_bandwidth})
         % endif
         % if int(eval(band_count)) > 20:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_20_frequency}, ${band_20_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_20_frequency}, ${band_20_bandwidth})
         % endif
         % if int(eval(band_count)) > 21:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_21_frequency}, ${band_21_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_21_frequency}, ${band_21_bandwidth})
         % endif
         % if int(eval(band_count)) > 22:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_22_frequency}, ${band_22_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_22_frequency}, ${band_22_bandwidth})
         % endif
         % if int(eval(band_count)) > 23:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_23_frequency}, ${band_23_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_23_frequency}, ${band_23_bandwidth})
         % endif
         % if int(eval(band_count)) > 24:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_24_frequency}, ${band_24_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_24_frequency}, ${band_24_bandwidth})
         % endif
         % if int(eval(band_count)) > 25:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_25_frequency}, ${band_25_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_25_frequency}, ${band_25_bandwidth})
         % endif
         % if int(eval(band_count)) > 26:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_26_frequency}, ${band_26_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_26_frequency}, ${band_26_bandwidth})
         % endif
         % if int(eval(band_count)) > 27:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_27_frequency}, ${band_27_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_27_frequency}, ${band_27_bandwidth})
         % endif
         % if int(eval(band_count)) > 28:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_28_frequency}, ${band_28_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_28_frequency}, ${band_28_bandwidth})
         % endif
         % if int(eval(band_count)) > 29:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_29_frequency}, ${band_29_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_29_frequency}, ${band_29_bandwidth})
         % endif
         % if int(eval(band_count)) > 30:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_30_frequency}, ${band_30_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_30_frequency}, ${band_30_bandwidth})
         % endif
         % if int(eval(band_count)) > 31:
-        ${id}_bands.push_back(sparsdr.simple_band_spec(${band_31_frequency}, ${band_31_bandwidth})
+        ${id}_bands.append(sparsdr.simple_band_spec(${band_31_frequency}, ${band_31_bandwidth})
         % endif
         self.${id} = ${id} = sparsdr.simple_combined_usrp_receiver(device_addr=uhd.device_addr(${device_addr}), format_version=${format_version}, center_frequency=${center_freq}, bands=${id}.get_values(), threshold=${threshold}, reconstruct_path=shutil.which(${reconstruct_path}), zero_gaps=${zero_gaps}, skip_bin_config=${skip_config})
         self.${id}.set_gain(${gain})

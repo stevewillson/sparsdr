@@ -11,7 +11,7 @@
 ########################################################################
 install(FILES
     api.h
-    band_spec_vector.h 
+    # band_spec_vector.h 
     band_spec.h
     combined_pluto_receiver.h
     combined_usrp_receiver.h

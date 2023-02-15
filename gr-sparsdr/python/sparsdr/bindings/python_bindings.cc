@@ -22,7 +22,6 @@ namespace py = pybind11;
 /**************************************/
 // BINDING_FUNCTION_PROTOTYPES(
 void bind_band_spec(py::module&);
-void bind_band_spec_vector(py::module&);
 void bind_combined_pluto_receiver(py::module&);
 void bind_combined_usrp_receiver(py::module&);
 void bind_compressing_pluto_source(py::module&);
@@ -59,7 +58,6 @@ PYBIND11_MODULE(sparsdr_python, m)
     /**************************************/
     // BINDING_FUNCTION_CALLS(
     bind_band_spec(m);
-    bind_band_spec_vector(m);
     bind_combined_pluto_receiver(m);
     bind_combined_usrp_receiver(m);
     bind_compressing_pluto_source(m);

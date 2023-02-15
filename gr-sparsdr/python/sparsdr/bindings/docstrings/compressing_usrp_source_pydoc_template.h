@@ -39,5 +39,57 @@
 
 
 
+ static const char *__doc_gr_sparsdr_compressing_usrp_source_set_compression_enabled = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_run_fft = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_send_average_samples = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_start_all = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_stop_all = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_fft_size = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_fft_size = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_shift_amount = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_bin_threshold = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_thresholds_from_file = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_bin_window_value = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_load_rounded_hann_window = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_bin_mask = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_clear_bin_mask = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_send_fft_samples = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_bin_spec = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_average_weight = R"doc()doc";
+
+
+static const char *__doc_gr_sparsdr_compressing_usrp_source_set_average_interval = R"doc()doc";
 
   

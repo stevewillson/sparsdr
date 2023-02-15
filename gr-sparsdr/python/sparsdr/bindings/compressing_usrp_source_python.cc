@@ -24,17 +24,21 @@
 namespace py = pybind11;
 
 #include <gnuradio/sparsdr/compressing_usrp_source.h>
+// #include <gnuradio/sparsdr/compressing_source.h>
 // pydoc.h is automatically generated in the build directory
 #include <compressing_usrp_source_pydoc.h>
 
 void bind_compressing_usrp_source(py::module& m)
 {
 
-    using compressing_usrp_source    = ::gr::sparsdr::compressing_usrp_source;
+    using compressing_usrp_source = ::gr::sparsdr::compressing_usrp_source;
 
     py::class_<compressing_usrp_source, 
-        gr::hier_block2,
-        std::shared_ptr<compressing_usrp_source>>(m, "compressing_usrp_source", D(compressing_usrp_source))
+            // gr::sparsdr::compressing_source,
+            gr::hier_block2,
+            gr::basic_block,
+            std::shared_ptr<compressing_usrp_source>>(
+        m, "compressing_usrp_source", D(compressing_usrp_source))
 
         .def(py::init(&compressing_usrp_source::make),
            py::arg("device_addr"),
@@ -55,6 +59,116 @@ void bind_compressing_usrp_source(py::module& m)
             py::arg("ant"),
             D(compressing_usrp_source,set_antenna)
         )
+
+
+
+        // parent methods
+        .def("set_compression_enabled",&compressing_usrp_source::set_compression_enabled,       
+            py::arg("enabled"),
+            D(compressing_usrp_source,set_compression_enabled)
+        )
+
+
+        .def("set_run_fft",&compressing_usrp_source::set_run_fft,       
+            py::arg("enable"),
+            D(compressing_usrp_source,set_run_fft)
+        )
+
+
+        .def("set_send_average_samples",&compressing_usrp_source::set_send_average_samples,       
+            py::arg("enable"),
+            D(compressing_usrp_source,set_send_average_samples)
+        )
+
+
+        .def("set_send_fft_samples",&compressing_usrp_source::set_send_fft_samples,       
+            py::arg("enable"),
+            D(compressing_usrp_source,set_send_fft_samples)
+        )
+
+
+        .def("start_all",&compressing_usrp_source::start_all,       
+            D(compressing_usrp_source,start_all)
+        )
+
+
+        .def("stop_all",&compressing_usrp_source::stop_all,       
+            D(compressing_usrp_source,stop_all)
+        )
+
+
+        .def("set_fft_size",&compressing_usrp_source::set_fft_size,
+            py::arg("size"),    
+            D(compressing_usrp_source,set_fft_size)
+        )
+
+
+        .def("fft_size",&compressing_usrp_source::fft_size,       
+            D(compressing_usrp_source,fft_size)
+        )
+
+
+        .def("set_shift_amount",&compressing_usrp_source::set_shift_amount,
+            py::arg("scaling"),          
+            D(compressing_usrp_source,set_shift_amount)
+        )
+
+        
+        .def("set_bin_threshold",&compressing_usrp_source::set_bin_threshold,
+            py::arg("bin_index"),          
+            py::arg("threshold"),  
+            D(compressing_usrp_source,set_bin_threshold)
+        )
+
+
+        .def("set_thresholds_from_file",&compressing_usrp_source::set_thresholds_from_file,
+            py::arg("path"),          
+            D(compressing_usrp_source,set_thresholds_from_file)
+        )
+
+
+        .def("set_bin_window_value",&compressing_usrp_source::set_bin_window_value,
+            py::arg("bin_index"),          
+            py::arg("value"),  
+            D(compressing_usrp_source,set_bin_window_value)
+        )
+
+
+        .def("load_rounded_hann_window",&compressing_usrp_source::load_rounded_hann_window,
+            py::arg("bins"),          
+            D(compressing_usrp_source,load_rounded_hann_window)
+        )
+
+
+        .def("set_bin_mask",&compressing_usrp_source::set_bin_mask,
+            py::arg("bin_index"),          
+            D(compressing_usrp_source,set_bin_mask)
+        )
+
+
+        .def("clear_bin_mask",&compressing_usrp_source::clear_bin_mask,
+            py::arg("bin_index"),          
+            D(compressing_usrp_source,clear_bin_mask)
+        )
+
+
+        .def("set_bin_spec",&compressing_usrp_source::set_bin_spec,
+            py::arg("spec"),          
+            D(compressing_usrp_source,set_bin_spec)
+        )
+
+
+        .def("set_average_weight",&compressing_usrp_source::set_average_weight,
+            py::arg("weight"),          
+            D(compressing_usrp_source,set_average_weight)
+        )
+
+
+        .def("set_average_interval",&compressing_usrp_source::set_average_interval,
+            py::arg("interval"),          
+            D(compressing_usrp_source,set_average_interval)
+        )
+        ;
         ;
 
         py::module m_sparsdr = m.def_submodule("sparsdr");

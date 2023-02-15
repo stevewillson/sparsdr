@@ -56,10 +56,9 @@ int bins_calc(float capture_center_freq,
                         rnd_digits);
 
     if ((right_bin - left_bin + 1) % 2 != 0) {
-        if ((left_bin == 0) || ((unsigned int)left_bin == (fft_size / 2)))
+        if ((left_bin == 0) || (left_bin == (fft_size / 2)))
             right_bin += 1;
-        else if (((unsigned int)right_bin == (fft_size - 1)) ||
-                 ((unsigned int)right_bin == (fft_size / 2) - 1))
+        else if ((right_bin == (fft_size - 1)) || (right_bin == (fft_size / 2) - 1))
             left_bin -= 1;
         else if (r_adj > l_adj)
             right_bin -= 1;

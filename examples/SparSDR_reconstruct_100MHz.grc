@@ -11,7 +11,7 @@ options:
     gen_linking: dynamic
     generate_options: qt_gui
     hier_block_src_path: '.:'
-    id: top_block
+    id: SparSDR_reconstruct_100MHz
     max_nouts: '0'
     output_language: python
     placement: (0,0)
@@ -19,11 +19,11 @@ options:
     realtime_scheduling: ''
     run: 'True'
     run_command: '{python} -u {filename}'
-    run_options: run
+    run_options: prompt
     sizing_mode: fixed
     thread_safe_setters: ''
-    title: ''
-    window_size: ''
+    title: SparSDR reconstruction of 100MHz
+    window_size: (1000,1000)
   states:
     bus_sink: false
     bus_source: false
@@ -37,7 +37,7 @@ blocks:
   id: variable_sparsdr_reconstruct
   parameters:
     band_0_bins: '1024'
-    band_0_frequency: -25e6
+    band_0_frequency: '-25000000'
     band_10_bins: '2048'
     band_10_frequency: '0.0'
     band_11_bins: '2048'
@@ -59,7 +59,7 @@ blocks:
     band_19_bins: '2048'
     band_19_frequency: '0.0'
     band_1_bins: '1024'
-    band_1_frequency: 25e6
+    band_1_frequency: '25000000'
     band_20_bins: '2048'
     band_20_frequency: '0.0'
     band_21_bins: '2048'
@@ -110,9 +110,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [416, 268.0]
+    coordinate: [488, 188.0]
     rotation: 0
-    state: enabled
+    state: true
 - name: qtgui_waterfall_sink_x_0
   id: qtgui_waterfall_sink_x
   parameters:
@@ -165,16 +165,16 @@ blocks:
     nconnections: '1'
     showports: 'False'
     type: complex
-    update_time: '0.1'
+    update_time: '0.10'
     wintype: window.WIN_BLACKMAN_hARRIS
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [728, 260.0]
+    coordinate: [784, 188.0]
     rotation: 0
-    state: enabled
-- name: qtgui_waterfall_sink_x_0_0
+    state: true
+- name: qtgui_waterfall_sink_x_1
   id: qtgui_waterfall_sink_x
   parameters:
     affinity: ''
@@ -226,15 +226,15 @@ blocks:
     nconnections: '1'
     showports: 'False'
     type: complex
-    update_time: '0.1'
+    update_time: '0.10'
     wintype: window.WIN_BLACKMAN_hARRIS
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [728, 356.0]
+    coordinate: [784, 268.0]
     rotation: 0
-    state: enabled
+    state: true
 - name: sparsdr_compressing_usrp_source_0
   id: sparsdr_compressing_usrp_source
   parameters:
@@ -242,7 +242,7 @@ blocks:
     alias: ''
     antenna: RX2
     bin_spec: 0..8:1
-    center_freq: 2.5e9
+    center_freq: '2500000000'
     comment: ''
     device_addr: ''
     gain: '30'
@@ -256,14 +256,14 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [152, 292.0]
+    coordinate: [240, 212.0]
     rotation: 0
-    state: enabled
+    state: true
 
 connections:
 - [sparsdr_compressing_usrp_source_0, '0', variable_sparsdr_reconstruct_0, '0']
 - [variable_sparsdr_reconstruct_0, '0', qtgui_waterfall_sink_x_0, '0']
-- [variable_sparsdr_reconstruct_0, '1', qtgui_waterfall_sink_x_0_0, '0']
+- [variable_sparsdr_reconstruct_0, '1', qtgui_waterfall_sink_x_1, '0']
 
 metadata:
   file_format: 1

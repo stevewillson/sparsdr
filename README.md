@@ -14,7 +14,7 @@ send compressed signals
 ## Getting started
 
 * [Pluto getting started guide](doc/getting_started_pluto.md)
-* [USRP N2101 getting started guide](doc/getting_started_pluto.md)
+* [USRP N210 getting started guide](doc/getting_started_n210.md)
 
 ## Debugging
 
@@ -22,25 +22,24 @@ When SparSDR does not work correctly, [the debugging guide](doc/debugging.md) ma
 
 ## Compatibility
 
-We have tested SparSDR with GNU Radio 3.8.2.0.
+SparSDR works with GNU Radio 3.10.5.1
 
-SparSDR should work with any GNU Radio version in the 3.8 series.
+SparSDR should work with any GNU Radio version in the 3.10 series.
 
 ### Pluto SDR
 
-SparSDR  works with the Analog Devices ADALM-PLUTO radio. We have tested hardware revisions B and C.
+SparSDR works with the Analog Devices ADALM-PLUTO radio. We have tested hardware revisions B and C.
 
 ### USRP N210
 
-We have tested SparSDR with a USRP N210 revision 4 with an SBX-120 or a CBX-120 daughter board.
+We have tested SparSDR with a NI-USRP 2922 (same as USRP-N210 revision 4 with an SBX-120 or a CBX-120 daughter board).
 
 This repository includes one FPGA image for the USRP N210 revision 4, and a separate FPGA image for N210 revisions 2 and 3.
 
 Daughter boards other than the SBX-120 should also work, with the following considerations:
 
-* If the daughter board receive bandwidth is less than 100 MHz, this will limit what you can receive with SparSDR
+* If the daughter board receive bandwidth is less than 100 MHz, this will limit what you can receive with SparSDR.
 * If the daughter board receive bandwidth is greater than 100 MHz, you may see aliasing because the signal will still be sampled at 100 million samples per second.
-
 
 ## Licenses
 
